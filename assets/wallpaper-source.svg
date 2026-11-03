@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#080710"/>
+      <stop offset=".52" stop-color="#100a1b"/>
+      <stop offset="1" stop-color="#060914"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx=".52" cy=".48" r=".72">
+      <stop stop-color="#33205b" stop-opacity=".72"/>
+      <stop offset=".58" stop-color="#201533" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#090914" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="violet" x1=".04" y1=".1" x2=".91" y2=".85">
+      <stop stop-color="#35245e"/>
+      <stop offset=".34" stop-color="#7955c2"/>
+      <stop offset=".58" stop-color="#302454"/>
+      <stop offset=".84" stop-color="#17132d"/>
+      <stop offset="1" stop-color="#080b18"/>
+    </linearGradient>
+    <linearGradient id="violetFold" x1=".07" y1=".08" x2=".9" y2=".92">
+      <stop stop-color="#b28bff" stop-opacity=".08"/>
+      <stop offset=".28" stop-color="#9b73e8" stop-opacity=".68"/>
+      <stop offset=".66" stop-color="#37265f" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#14132c" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="rose" x1=".05" y1=".2" x2=".92" y2=".78">
+      <stop stop-color="#38223e"/>
+      <stop offset=".36" stop-color="#bd6e9d"/>
+      <stop offset=".7" stop-color="#8d4f87"/>
+      <stop offset="1" stop-color="#332044"/>
+    </linearGradient>
+    <linearGradient id="roseLight" x1="0" y1="0" x2="1" y2=".3">
+      <stop stop-color="#d690bd" stop-opacity=".1"/>
+      <stop offset=".42" stop-color="#ffd5ef" stop-opacity=".88"/>
+      <stop offset=".72" stop-color="#ca8dff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#c996ff" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="edge" x1=".1" y1="0" x2=".92" y2="1">
+      <stop stop-color="#e0bdff" stop-opacity=".12"/>
+      <stop offset=".32" stop-color="#e4c7ff" stop-opacity=".95"/>
+      <stop offset=".62" stop-color="#aa89ff" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#78cfff" stop-opacity=".08"/>
+    </linearGradient>
+    <radialGradient id="warmGlow" cx=".3" cy=".4" r=".76">
+      <stop stop-color="#ffc0df" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#f187c1" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Fine, deterministic grain: repeated vectors avoid a costly live turbulence filter. -->
+    <pattern id="surfaceGrain" width="80" height="80" patternUnits="userSpaceOnUse">
+      <g fill="#f8edff">
+        <circle cx="4" cy="7" r=".7" fill-opacity=".34"/>
+        <circle cx="15" cy="22" r=".55" fill-opacity=".28"/>
+        <circle cx="27" cy="5" r=".65" fill-opacity=".24"/>
+        <circle cx="39" cy="17" r=".7" fill-opacity=".3"/>
+        <circle cx="55" cy="8" r=".55" fill-opacity=".26"/>
+        <circle cx="71" cy="20" r=".7" fill-opacity=".3"/>
+        <circle cx="8" cy="39" r=".55" fill-opacity=".25"/>
+        <circle cx="21" cy="51" r=".7" fill-opacity=".32"/>
+        <circle cx="34" cy="37" r=".55" fill-opacity=".28"/>
+        <circle cx="48" cy="54" r=".65" fill-opacity=".3"/>
+        <circle cx="63" cy="39" r=".55" fill-opacity=".25"/>
+        <circle cx="76" cy="57" r=".7" fill-opacity=".3"/>
+        <circle cx="5" cy="71" r=".65" fill-opacity=".3"/>
+        <circle cx="29" cy="72" r=".55" fill-opacity=".25"/>
+        <circle cx="44" cy="68" r=".7" fill-opacity=".3"/>
+        <circle cx="60" cy="76" r=".55" fill-opacity=".27"/>
+      </g>
+      <g fill="#100c1d">
+        <circle cx="10" cy="15" r=".6" fill-opacity=".42"/>
+        <circle cx="32" cy="27" r=".7" fill-opacity=".34"/>
+        <circle cx="67" cy="6" r=".6" fill-opacity=".38"/>
+        <circle cx="17" cy="37" r=".7" fill-opacity=".34"/>
+        <circle cx="53" cy="31" r=".65" fill-opacity=".4"/>
+        <circle cx="72" cy="47" r=".65" fill-opacity=".38"/>
+        <circle cx="13" cy="62" r=".6" fill-opacity=".38"/>
+        <circle cx="38" cy="45" r=".6" fill-opacity=".36"/>
+        <circle cx="57" cy="63" r=".7" fill-opacity=".36"/>
+        <circle cx="74" cy="74" r=".6" fill-opacity=".4"/>
+      </g>
+      <path d="M22 10l2 -1M44 31l2 -1M2 55l2 -1M64 68l2 -1" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width=".55"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#base)"/>
+  <rect width="1920" height="1080" fill="url(#ambient)"/>
+
+  <!-- Broad violet glass surface, with a sweeping edge inspired by the reference wallpaper. -->
+  <path d="M610-120 C665 122 827 235 1057 393 C1325 577 1420 756 1330 941 C1306 993 1275 1043 1242 1110 L1980 1110 L1980-120Z" fill="url(#violet)"/>
+  <path d="M610-120 C665 122 827 235 1057 393 C1325 577 1420 756 1330 941 C1306 993 1275 1043 1242 1110 L1980 1110 L1980-120Z" fill="url(#surfaceGrain)" opacity=".46"/>
+  <path d="M850-100 C900 147 1064 242 1278 393 C1510 556 1601 731 1505 919 C1473 985 1438 1042 1408 1104 C1585 1063 1775 967 1910 816 L1950-90Z" fill="url(#violetFold)"/>
+  <path d="M625-65 C681 161 839 266 1068 426 C1304 591 1384 757 1302 932 C1277 985 1255 1032 1234 1078" fill="none" stroke="url(#edge)" stroke-width="3" opacity=".78"/>
+  <path d="M864-48 C916 172 1079 276 1292 430 C1500 581 1588 743 1492 918 C1461 975 1432 1027 1407 1072" fill="none" stroke="#ead8ff" stroke-opacity=".24" stroke-width="1.4"/>
+
+  <!-- Rose-colored curved glass form; its paired edge strokes add a fine liquid highlight. -->
+  <path d="M-90 377 C194 416 436 554 645 755 C817 921 917 1043 1100 1112 L-90 1170Z" fill="url(#rose)"/>
+  <path d="M-90 377 C194 416 436 554 645 755 C817 921 917 1043 1100 1112 L-90 1170Z" fill="url(#warmGlow)"/>
+  <path d="M-90 377 C194 416 436 554 645 755 C817 921 917 1043 1100 1112 L-90 1170Z" fill="url(#surfaceGrain)" opacity=".58"/>
+  <path d="M-42 384 C221 433 449 572 652 770 C820 934 929 1054 1098 1110" fill="none" stroke="#160f22" stroke-opacity=".75" stroke-width="11"/>
+  <path d="M-42 378 C221 427 449 566 652 764 C820 928 929 1048 1098 1104" fill="none" stroke="url(#roseLight)" stroke-width="2.6"/>
+
+  <!-- A deep curved fold keeps the luminous surfaces distinct against the dark base. -->
+  <path d="M-90 551 C227 605 460 754 630 922 C742 1033 835 1094 970 1130 L-90 1130Z" fill="#080914" fill-opacity=".66"/>
+  <path d="M-45 556 C247 621 472 770 639 934 C740 1033 837 1090 960 1120" fill="none" stroke="#b39aff" stroke-opacity=".48" stroke-width="2"/>
+  <path d="M1500 1080 C1572 924 1680 812 1900 720 L1950 1080Z" fill="#6944a7" fill-opacity=".18"/>
+  <path d="M1490 1080 C1563 925 1675 816 1900 723" fill="none" stroke="#d6baff" stroke-opacity=".55" stroke-width="2"/>
+</svg>

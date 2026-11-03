@@ -9,7 +9,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 : "${TV_HOST:?set TV_HOST to the TV IP address, e.g. TV_HOST=192.168.1.50 $0}"
 DEVICE="${DEVICE:-lgtv}"
-APP_ID=com.gathin.tvhome
+APP_ID=com.alex.glassos
 
 # LG's webOS CLI: use it from PATH, otherwise fetch it with npx.
 ares() {
@@ -21,11 +21,14 @@ PY="${PY:-python3}"
 [ -x venv/bin/python ] && PY=venv/bin/python
 "$PY" sync-apps.py "$TV_HOST"
 
-if [ ! -f app/icon.png ]; then
-  # The webOS app list wants PNG icons: 80px and 130px.
-  sips -s format png -z 80 80 assets/icon.jpg --out app/icon.png >/dev/null
-  sips -s format png -z 130 130 assets/icon.jpg --out app/largeIcon.png >/dev/null
+# Always refresh webOS's small and large app icons from the canonical high-resolution artwork.
+ICON_SOURCE=assets/glassos-icon-final.png
+if [ ! -f "$ICON_SOURCE" ]; then
+  echo "Missing GlassOS icon source: $ICON_SOURCE" >&2
+  exit 1
 fi
+sips -s format png -z 80 80 "$ICON_SOURCE" --out app/icon.png >/dev/null
+sips -s format png -z 130 130 "$ICON_SOURCE" --out app/largeIcon.png >/dev/null
 
 rm -rf build && mkdir build
 ares package app -o build

@@ -1,7 +1,8 @@
 MIT License
 
-Copyright (c) 2026 Gathin
-Copyright (c) 2026 OmkarK97
+Copyright © 2026 Alex Odam
+Copyright © 2026 Gathin
+Inspired by Apple Inc & OmkarK97
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,5 @@ SOFTWARE.
 
 ---
 
-The Outfit typeface in launcher/app/src/main/res/font/outfit.ttf is copyright
-The Outfit Project Authors and licensed under the SIL Open Font License 1.1,
-see launcher/FONT-LICENSE-OFL.txt.
+The Outfit typeface in app/fonts/outfit.ttf is copyright The Outfit Project
+Authors and licensed under the SIL Open Font License 1.1. See app/fonts/OFL.txt.

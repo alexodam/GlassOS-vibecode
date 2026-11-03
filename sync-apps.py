@@ -17,6 +17,7 @@ import urllib.request
 import lgtv
 
 APP_DIR = os.path.join(lgtv.HERE, "app")
+GLASSOS_ICON = os.path.join(lgtv.HERE, "assets", "glassos-icon-final.png")
 
 
 async def main(host, list_only):
@@ -39,13 +40,18 @@ async def main(host, list_only):
     for p in points:
         if p.get("hidden"):
             continue
-        url = p.get("largeIcon") if str(p.get("largeIcon", "")).startswith("http") else p.get("icon")
         name = "".join(ch if ch.isalnum() or ch in "._-" else "_" for ch in p["id"]) + ".png"
-        try:
-            data = urllib.request.urlopen(url, context=ctx, timeout=10).read()
-        except Exception as e:
-            print(f"  no icon for {p['id']}: {e}")
-            continue
+        if p["id"] == "com.alex.glassos" and os.path.isfile(GLASSOS_ICON):
+            # Keep GlassOS's own tile on the canonical high-resolution artwork.
+            with open(GLASSOS_ICON, "rb") as icon_file:
+                data = icon_file.read()
+        else:
+            url = p.get("largeIcon") if str(p.get("largeIcon", "")).startswith("http") else p.get("icon")
+            try:
+                data = urllib.request.urlopen(url, context=ctx, timeout=10).read()
+            except Exception as e:
+                print(f"  no icon for {p['id']}: {e}")
+                continue
         with open(os.path.join(icon_dir, name), "wb") as f:
             f.write(data)
         apps.append({

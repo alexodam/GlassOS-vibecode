@@ -1,10 +1,8 @@
-# pairing key, build output and files generated from your own TV
+.DS_Store
 .lgtv-key.json
-build/
 venv/
 __pycache__/
-app/apps.js
-app/icons/
-app/icon.png
-app/largeIcon.png
-.DS_Store
+/app/icons/
+build/*.ipk
+SHA256SUMS.txt
+build/*.zip

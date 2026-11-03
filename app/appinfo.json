@@ -1,15 +1,18 @@
 {
-  "id": "com.gathin.tvhome",
+  "id": "com.alex.glassos.minimal",
   "version": "1.0.0",
-  "vendor": "tv-vibehack",
+  "vendor": "GlassOS",
   "type": "web",
   "main": "index.html",
-  "title": "Home",
+  "title": "GlassOS (Minimal)",
   "icon": "icon.png",
   "largeIcon": "largeIcon.png",
-  "bgColor": "#000000",
-  "iconColor": "#000000",
+  "bgColor": "#080a12",
+  "iconColor": "#07132b",
   "resolution": "1920x1080",
   "disableBackHistoryAPI": true,
-  "requiredACG": ["application.launcher", "network.query"]
+  "requiredACG": [
+    "application.launcher",
+    "network.query"
+  ]
 }
