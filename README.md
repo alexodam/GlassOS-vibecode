@@ -1,5 +1,7 @@
 # GlassOS
 
+<p align="center"><img src="assets/glassos-emblem.png" alt="GlassOS logo" width="220"></p>
+
 ### GlassOS (Minimal) — a glassy launcher for LG TVs
 
 **GitHub repository:** GlassOS  
@@ -32,7 +34,7 @@ The home-screen image below is a straightened, screenshot-style crop of GlassOS 
 - **A quiet, information-rich header.** See a time-of-day greeting, date, and clock in either 12-hour or 24-hour format.
 - **Optional local weather.** Add coordinates in `app/config.js` to show the current temperature and conditions. Weather is off in the public starter configuration, so no location is sent until you choose to enable it.
 - **A glass shelf and app grid.** Installed TV apps appear as large, remote-friendly tiles. The glass highlight follows focus, and tile backgrounds adapt to each app's icon colours.
-- **A configurable dock and app order.** Choose the dock apps, rearrange tiles with the remote, and keep the Add Apps control aligned at the bottom-right of the grid as the installed app count changes.
+- **A configurable dock and app order.** Choose the dock apps, rearrange tiles with the remote,.
 - **Add Apps and restore.** Open the app library to bring removed apps back. Apps can be hidden from GlassOS without uninstalling them from webOS.
 - **Inputs in one place.** Open HDMI inputs, Live TV, or AirPlay when those are available and enabled. HDMI names are taken from your TV, so your own input labels are used.
 - **TV status and settings.** The header shows the current Wi-Fi or Ethernet status. GlassOS also provides shortcuts into webOS settings.
